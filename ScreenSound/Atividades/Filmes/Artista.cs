@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ScreenSound.Atividades.Filmes
 {
-	public class Artista
+	internal class Artista
 	{
 		public Artista() { }
 		public Artista(string nome, int idade)

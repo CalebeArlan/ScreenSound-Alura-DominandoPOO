@@ -1,10 +1,11 @@
 ﻿using ScreenSound.Atividades.Filmes;
 using ScreenSound.Modelos;
+using VideoFlix.PlataformaA;
 
 Banda ira = new Banda("Ira!");
-ira.AdicionarNota(10);
-ira.AdicionarNota(8);
-ira.AdicionarNota(6);
+ira.AdicionarNota(new Avaliacao(10));
+ira.AdicionarNota(new Avaliacao(8));
+ira.AdicionarNota(new Avaliacao(6));
 Banda beatles = new ("The Beatles");
 
 Dictionary<string, Banda> bandasRegistradas = new();
@@ -142,9 +143,9 @@ void AvaliarUmaBanda()
     {
         Banda banda = bandasRegistradas[nomeDaBanda];
 		Console.Write($"Qual a nota que a banda {nomeDaBanda} merece: ");
-        int nota = int.Parse(Console.ReadLine()!);
+        Avaliacao nota = Avaliacao.Parse(Console.ReadLine()!);
         banda.AdicionarNota(nota);
-		Console.WriteLine($"\nA nota {nota} foi registrada com sucesso para a banda {nomeDaBanda}");
+		Console.WriteLine($"\nA nota {nota.Nota} foi registrada com sucesso para a banda {nomeDaBanda}");
         Thread.Sleep(2000);
         Console.Clear();
         ExibirOpcoesDoMenu();
@@ -191,6 +192,10 @@ void ExibirDetalhes()
 
 //ExibirOpcoesDoMenu();
 
+//VideoFlix.PlataformaA.Video video = new VideoFlix.PlataformaA.Video();
+//VideoFlix.PlataformaB.Video video2 = new VideoFlix.PlataformaB.Video();
+
+# region TesteFilmeArtista
 Artista artista1 = new Artista("Tom Holand", 30);
 Filme filme1 = new Filme("Homem-Aranha: Sem Volta Para Casa", 148);
 filme1.AdicionarArtista(artista1);
@@ -204,3 +209,12 @@ foreach(Filme filme in artista1.Filmes)
 {
     Console.WriteLine($"Artista: {artista1.Nome}, Filme: {filme.Titulo}, Duração: {filme.Duracao} minutos");
 }
+
+#endregion
+# region TesteIncrementadorObjetos
+/*Album a1 = new Album("Barões da Pisadinha Ao Vivo");
+Album a2 = new Album("Barões da Pisadinha feat.Anitta");
+Album a3 = new Album("Barões da Pisadinha no Free Jazz Festival)");
+
+Console.WriteLine($"Total de objetos criados: { Album.ContadorDeObjetos}");*/
+#endregion

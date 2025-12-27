@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace ScreenSound.Atividades.Filmes
 {
-	public class Filme
+	internal class Filme
 	{
-		public Filme() { }
+		internal Filme() { }
 		public Filme(string titulo, int duracao)
 		{
 			Titulo = titulo;
 			Duracao = duracao;
 		}
-		public string Titulo { get; set; }
-		public int Duracao { get; set; }
+		internal string Titulo { get; set; }
+		internal int Duracao { get; set; }
 
 		public List<Artista> Artistas { get;} = new List<Artista>();
 

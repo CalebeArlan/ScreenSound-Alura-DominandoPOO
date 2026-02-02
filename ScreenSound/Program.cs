@@ -1,4 +1,5 @@
 ﻿using ScreenSound.Atividades.Filmes;
+using ScreenSound.Atividades.FormasGeometricas;
 using ScreenSound.Menus;
 using ScreenSound.Modelos;
 using VideoFlix.PlataformaA;
@@ -62,4 +63,6 @@ void ExibirOpcoesDoMenu()
     }
 }
 
-ExibirOpcoesDoMenu();
+//ExibirOpcoesDoMenu();
+
+MenuFormasGeometricas.Menu();  
